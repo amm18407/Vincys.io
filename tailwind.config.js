@@ -22,7 +22,7 @@ module.exports = {
           900: '#1a3829',
         },
         background: {
-          light: '#FFFFFF',
+          light: '#FFEEDD',
           dark: '#111514',
         },
         foreground: {
@@ -55,7 +55,9 @@ module.exports = {
         }
       },
       fontFamily: {
-        sans: ['Inter', 'system-ui', 'sans-serif'],
+        sans: ['Satoshi', 'Inter', 'system-ui', 'sans-serif'],
+        satoshi: ['Satoshi', 'system-ui', 'sans-serif'],
+        inter: ['Inter', 'system-ui', 'sans-serif'],
       },
       animation: {
         'fade-in': 'fadeIn 0.6s ease-in-out',
