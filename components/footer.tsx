@@ -1,7 +1,7 @@
 "use client"
 
 import { motion } from 'framer-motion'
-import { Zap, Mail, Phone, MapPin, Twitter, Linkedin, Github, Facebook } from 'lucide-react'
+import { Mail, Phone, MapPin, Twitter, Linkedin, Github, Facebook } from 'lucide-react'
 import Image from 'next/image'
 
 const footerLinks = {
@@ -40,7 +40,7 @@ const socialLinks = [
 
 export function Footer() {
   return (
-    <footer className="bg-neutral-900 text-white">
+    <footer className="bg-background-dark text-foreground-dark">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-16">
         {/* Main Footer Content */}
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-6 gap-8 mb-12">
@@ -53,11 +53,11 @@ export function Footer() {
               viewport={{ once: true }}
             >
               <div className="flex items-center space-x-2 mb-6">
-                <Image 
-                  src="/Group 2.svg" 
-                  alt="Vincys Logo" 
-                  width={32} 
-                  height={32} 
+                <Image
+                  src="/Group 2.png"
+                  alt="Vincys Logo"
+                  width={144}
+                  height={64}
                   className="h-16 w-36"
                 />
               </div>
@@ -69,15 +69,15 @@ export function Footer() {
               {/* Contact Info */}
               <div className="space-y-3">
                 <div className="flex items-center space-x-3 text-neutral-300">
-                  <Mail className="h-4 w-4 text-primary-400" />
+                  <Mail className="h-4 w-4 text-primary-500" />
                   <span>hello@vincys.io</span>
                 </div>
                 <div className="flex items-center space-x-3 text-neutral-300">
-                  <Phone className="h-4 w-4 text-primary-400" />
+                  <Phone className="h-4 w-4 text-primary-500" />
                   <span>+1 (555) 123-4567</span>
                 </div>
                 <div className="flex items-center space-x-3 text-neutral-300">
-                  <MapPin className="h-4 w-4 text-primary-400" />
+                  <MapPin className="h-4 w-4 text-primary-500" />
                   <span>San Francisco, CA</span>
                 </div>
               </div>
@@ -97,7 +97,7 @@ export function Footer() {
                 <li key={link.name}>
                   <a 
                     href={link.href} 
-                    className="text-neutral-300 hover:text-primary-400 transition-colors duration-200"
+                    className="text-neutral-300 hover:text-primary-500 transition-colors duration-200"
                   >
                     {link.name}
                   </a>
@@ -119,7 +119,7 @@ export function Footer() {
                 <li key={link.name}>
                   <a 
                     href={link.href} 
-                    className="text-neutral-300 hover:text-primary-400 transition-colors duration-200"
+                    className="text-neutral-300 hover:text-primary-500 transition-colors duration-200"
                   >
                     {link.name}
                   </a>
@@ -141,7 +141,7 @@ export function Footer() {
                 <li key={link.name}>
                   <a 
                     href={link.href} 
-                    className="text-neutral-300 hover:text-primary-400 transition-colors duration-200"
+                    className="text-neutral-300 hover:text-primary-500 transition-colors duration-200"
                   >
                     {link.name}
                   </a>
@@ -163,7 +163,7 @@ export function Footer() {
                 <li key={link.name}>
                   <a 
                     href={link.href} 
-                    className="text-neutral-300 hover:text-primary-400 transition-colors duration-200"
+                    className="text-neutral-300 hover:text-primary-500 transition-colors duration-200"
                   >
                     {link.name}
                   </a>
@@ -219,7 +219,7 @@ export function Footer() {
                 <a
                   key={social.name}
                   href={social.href}
-                  className="p-2 bg-neutral-800 hover:bg-neutral-700 rounded-xl text-neutral-300 hover:text-primary-400 transition-all duration-200"
+                  className="p-2 bg-neutral-800 hover:bg-neutral-700 rounded-xl text-neutral-300 hover:text-primary-500 transition-all duration-200"
                   aria-label={social.name}
                 >
                   <social.icon className="h-5 w-5" />

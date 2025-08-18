@@ -36,7 +36,7 @@ const metrics = [
 
 export function SocialProof() {
   return (
-    <section className="py-20 bg-neutral-50 dark:bg-neutral-800">
+    <section className="py-20 bg-white dark:bg-neutral-900">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         {/* Metrics Section */}
         <motion.div
@@ -46,7 +46,7 @@ export function SocialProof() {
           viewport={{ once: true }}
           className="text-center mb-20"
         >
-          <h2 className="text-3xl sm:text-4xl font-bold text-neutral-900 dark:text-white mb-12">
+          <h2 className="text-3xl sm:text-4xl font-bold text-foreground-light dark:text-foreground-dark mb-12">
             Trusted by Industry Leaders
           </h2>
           
@@ -78,7 +78,7 @@ export function SocialProof() {
           transition={{ duration: 0.6 }}
           viewport={{ once: true }}
         >
-          <h2 className="text-3xl sm:text-4xl font-bold text-neutral-900 dark:text-white text-center mb-12">
+          <h2 className="text-3xl sm:text-4xl font-bold text-foreground-light dark:text-foreground-dark text-center mb-12">
             What Our Customers Say
           </h2>
           
@@ -92,7 +92,7 @@ export function SocialProof() {
                 viewport={{ once: true }}
                 className="group"
               >
-                <div className="card p-8 h-full relative">
+                <div className="card p-8 h-full relative bg-gradient-to-br from-white to-neutral-50 dark:from-neutral-800 dark:to-neutral-900">
                   {/* Quote Icon */}
                   <div className="absolute top-6 right-6 text-primary-200 dark:text-primary-700">
                     <Quote className="h-8 w-8" />
@@ -116,7 +116,7 @@ export function SocialProof() {
                       {testimonial.name.charAt(0)}
                     </div>
                     <div>
-                      <div className="font-semibold text-neutral-900 dark:text-white">
+                      <div className="font-semibold text-foreground-light dark:text-foreground-dark">
                         {testimonial.name}
                       </div>
                       <div className="text-sm text-neutral-500 dark:text-neutral-400">
@@ -126,7 +126,7 @@ export function SocialProof() {
                   </div>
 
                   {/* Hover Effect */}
-                  <div className="absolute inset-0 bg-gradient-to-r from-primary-500/5 to-secondary-500/5 rounded-2xl opacity-0 group-hover:opacity-100 transition-opacity duration-300 pointer-events-none"></div>
+                  <div className="absolute inset-0 bg-gradient-to-br from-primary-500/5 to-neutral-500/5 rounded-2xl opacity-0 group-hover:opacity-100 transition-opacity duration-300 pointer-events-none"></div>
                 </div>
               </motion.div>
             ))}
@@ -138,3 +138,4 @@ export function SocialProof() {
     </section>
   )
 }
+

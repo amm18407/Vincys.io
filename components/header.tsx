@@ -5,9 +5,11 @@ import { Menu, X } from 'lucide-react'
 import { ThemeToggle } from './theme-toggle'
 import { motion } from 'framer-motion'
 import Image from 'next/image'
+import { useTheme } from 'next-themes'
 
 export function Header() {
   const [isMenuOpen, setIsMenuOpen] = useState(false)
+  const { theme } = useTheme()
 
   const navigation = [
     { name: 'Features', href: '#features' },
@@ -17,9 +19,9 @@ export function Header() {
   ]
 
   return (
-    <header className="fixed top-0 left-0 right-0 z-50 bg-white/80 dark:bg-neutral-900/80 backdrop-blur-md border-b border-neutral-200 dark:border-neutral-700">
+    <header className="fixed top-0 left-0 right-0 z-50 bg-background-light/90 dark:bg-background-dark/90 backdrop-blur-md border-b border-neutral-200 dark:border-neutral-700">
       <nav className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        <div className="flex justify-between items-center h-16">
+        <div className="flex justify-between items-center h-24">
           {/* Logo */}
           <motion.div
             initial={{ opacity: 0, x: -20 }}
@@ -28,10 +30,10 @@ export function Header() {
             className="flex items-center space-x-2"
           >
             <Image 
-              src="/Group 1.svg" 
+              src={theme === 'dark' ? "/Group 2.png" : "/Group 1.png"}
               alt="Vincys Logo" 
-              width={32} 
-              height={32} 
+              width={144} 
+              height={64} 
               className="h-16 w-36"
             />
           </motion.div>
@@ -41,7 +43,7 @@ export function Header() {
               <a
                 key={item.name}
                 href={item.href}
-                className="text-neutral-600 dark:text-neutral-300 hover:text-primary-600 dark:hover:text-primary-400 transition-colors duration-200 font-medium"
+                className="text-neutral-600 dark:text-neutral-300 hover:text-primary-500 dark:hover:text-primary-400 transition-colors duration-200 font-medium"
               >
                 {item.name}
               </a>
@@ -88,7 +90,7 @@ export function Header() {
                 <a
                   key={item.name}
                   href={item.href}
-                  className="block px-3 py-2 text-neutral-600 dark:text-neutral-300 hover:text-primary-600 dark:hover:text-primary-400 hover:bg-neutral-50 dark:hover:bg-neutral-800 rounded-lg transition-colors duration-200"
+                  className="block px-3 py-2 text-neutral-600 dark:text-neutral-300 hover:text-primary-500 dark:hover:text-primary-400 hover:bg-neutral-50 dark:hover:bg-neutral-800 rounded-lg transition-colors duration-200"
                   onClick={() => setIsMenuOpen(false)}
                 >
                   {item.name}

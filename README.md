@@ -177,3 +177,4 @@ For support or questions, please contact:
 ---
 
 Built with ❤️ using Next.js, TypeScript, and TailwindCSS
+

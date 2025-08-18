@@ -44,7 +44,7 @@ const features = [
 
 export function Features() {
   return (
-    <section id="features" className="py-20 bg-white dark:bg-neutral-900">
+    <section id="features" className="py-20 bg-neutral-50 dark:bg-neutral-900">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         {/* Section Header */}
         <motion.div
@@ -54,7 +54,7 @@ export function Features() {
           viewport={{ once: true }}
           className="text-center mb-16"
         >
-          <h2 className="text-3xl sm:text-4xl lg:text-5xl font-bold text-neutral-900 dark:text-white mb-6">
+          <h2 className="text-3xl sm:text-4xl lg:text-5xl font-bold text-foreground-light dark:text-foreground-dark mb-6">
             Powerful Features That
             <span className="block gradient-text">Drive Results</span>
           </h2>
@@ -75,14 +75,14 @@ export function Features() {
               viewport={{ once: true }}
               className="group"
             >
-              <div className="card p-8 h-full hover:scale-105 transition-transform duration-300">
+              <div className="card p-8 h-full hover:scale-105 transition-transform duration-300 bg-gradient-to-br from-white to-neutral-50 dark:from-neutral-800 dark:to-neutral-900">
                 {/* Icon */}
-                <div className={`inline-flex p-3 rounded-2xl bg-gradient-to-r ${feature.color} mb-6 group-hover:scale-110 transition-transform duration-300`}>
+                <div className="inline-flex p-3 rounded-2xl bg-primary-500 mb-6 group-hover:scale-110 transition-transform duration-300">
                   <feature.icon className="h-8 w-8 text-white" />
                 </div>
 
                 {/* Content */}
-                <h3 className="text-xl font-bold text-neutral-900 dark:text-white mb-4">
+                <h3 className="text-xl font-bold text-foreground-light dark:text-foreground-dark mb-4">
                   {feature.title}
                 </h3>
                 <p className="text-neutral-600 dark:text-neutral-300 leading-relaxed">
@@ -91,7 +91,7 @@ export function Features() {
 
                 {/* Hover Effect */}
                 <div className="mt-6 opacity-0 group-hover:opacity-100 transition-opacity duration-300">
-                  <div className={`w-12 h-1 bg-gradient-to-r ${feature.color} rounded-full`}></div>
+                  <div className="w-12 h-1 bg-primary-500 rounded-full"></div>
                 </div>
               </div>
             </motion.div>
@@ -106,8 +106,8 @@ export function Features() {
           viewport={{ once: true }}
           className="text-center mt-16"
         >
-          <div className="bg-gradient-to-r from-primary-50 to-secondary-50 dark:from-primary-900/20 dark:to-secondary-900/20 rounded-3xl p-8 border border-primary-100 dark:border-primary-800">
-            <h3 className="text-2xl font-bold text-neutral-900 dark:text-white mb-4">
+          <div className="bg-white dark:bg-neutral-800 rounded-3xl p-8 border border-neutral-200 dark:border-neutral-700 shadow-2xl">
+                          <h3 className="text-2xl font-bold text-foreground-light dark:text-foreground-dark mb-4">
               Ready to Experience the Future?
             </h3>
             <p className="text-neutral-600 dark:text-neutral-300 mb-6 max-w-2xl mx-auto">
@@ -123,3 +123,4 @@ export function Features() {
     </section>
   )
 }
+
